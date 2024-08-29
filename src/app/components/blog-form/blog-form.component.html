@@ -1,0 +1,12 @@
+<h2>{{ post.id ? 'Edit' : 'Create' }} Blog Post</h2>
+<form (ngSubmit)="save()">
+  <div>
+    <label>Title</label>
+    <input [(ngModel)]="post.title" name="title">
+  </div>
+  <div>
+    <label>Content</label>
+    <textarea [(ngModel)]="post.content" name="content"></textarea>
+  </div>
+  <button type="submit">Save</button>
+</form>
